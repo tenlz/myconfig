@@ -20,7 +20,7 @@
     environment.systemPackages = (with pkgs; [
       remmina
       ffmpegthumbnailer
-      amberol # music
+      #amberol # music
       loupe # image
       gnome-text-editor
       gnome-console
