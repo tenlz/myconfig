@@ -1,4 +1,4 @@
-{ pkgs
+{pkgs
 , ...
 }:
 
@@ -8,23 +8,13 @@
     services.xserver.enable = true;
     services.xserver.displayManager.gdm.enable = true;
     services.xserver.desktopManager.gnome.enable = true;
-    services.xserver.excludePackages = [ pkgs.xterm ];
-    services.xserver.desktopManager.xterm.enable = false;
-    services.gnome = {
-      core-utilities.enable = false;
-      gnome-online-accounts.enable = false;
-      gnome-browser-connector.enable = true;
-      tracker-miners.enable = false;
-      tracker.enable = false;
-    };
     environment.gnome.excludePackages = (with pkgs; [
       gnome-tour
-      orca
+      # orca
       #]) ++ (with pkgs.gnome; [
     ]);
     programs.dconf.enable = true;
-    # fix nautilus extensions deu to `core-utilities.enable = false`
-    # workarounds.gnome-fix.enable = true;
+  
     environment.systemPackages = (with pkgs; [
       remmina
       ffmpegthumbnailer
@@ -46,5 +36,8 @@
       # gnome-sound-recorder
       # gnome-power-manager
     ]);
+  
+ 
+
   };
 }
