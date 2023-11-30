@@ -95,6 +95,19 @@
     usbutils # lsusb
     
     ruby
+    
+    #gui
+    google-chrome
+    mpv
+    ffmpeg
+    gimp-with-plugins
+    inkscape
+    jellyfin-media-player
+    obsidian
+    mkvtoolnix
+    discord
+    upscayl
+   
   ];
 
   # 启用 starship，这是一个漂亮的 shell 提示符
