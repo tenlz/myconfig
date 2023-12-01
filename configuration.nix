@@ -11,6 +11,7 @@
       ./gnome.nix
       ./fonts.nix
       ./ibus.nix
+      
     ];
 
   # Bootloader.

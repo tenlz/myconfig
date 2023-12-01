@@ -107,6 +107,7 @@
     mkvtoolnix
     discord
     upscayl
+    libreoffice-fresh
    
   ];
 
@@ -134,7 +135,15 @@
     # TODO 设置一些别名方便使用，你可以根据自己的需要进行增删
     shellAliases = {
       k = "kubectl";
-      nixosup = "cd /home/shmily/myconfig && nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+      upgrade = "cd /home/shmily/myconfig && nix flake update && sudo nixos-rebuild switch --flake .#nixos";
+    };
+  };
+    
+  programs.fish = {
+    enable = true;
+    shellAbbrs = {
+      gc1 = "git clone --depth=1 ";
+      upgrade = "cd /home/shmily/myconfig && nix flake update && sudo nixos-rebuild switch --flake .#nixos";
     };
   };
 
