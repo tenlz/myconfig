@@ -97,6 +97,14 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  
+  nix.settings.auto-optimise-store = true;
+
+  nix.gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 5d";
+    }; 
 
   # 启用 Nix Flakes 功能，以及配套的新 nix-command 命令行工具
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -109,7 +117,12 @@
     git
     curl
   ];
+  
+  programs.fish.enable = true;
+  users.users.shmily.shell = pkgs.fish;
 
+  #programs.fish.enable = true;
+  #users.users.shmily.shell = pkgs.fish;
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;

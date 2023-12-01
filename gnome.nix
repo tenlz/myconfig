@@ -17,6 +17,13 @@
     ]);
     programs.dconf.enable = true;
   
+   # 使用 gsconnect
+    programs.kdeconnect = {
+      enable = true;
+    package = pkgs.gnomeExtensions.gsconnect;
+     };
+ 
+
     environment.systemPackages = (with pkgs; [
       remmina
       ffmpegthumbnailer

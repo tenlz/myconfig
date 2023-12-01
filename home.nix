@@ -153,8 +153,8 @@
       "org/gnome/desktop/interface".monospace-font-name = "Iosevka 10";
       "org/gnome/desktop/wm/preferences".titlebar-font = "Roboto Bold 11";
     };
-
-
+      
+ 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
   # when a new Home Manager release introduces backwards
