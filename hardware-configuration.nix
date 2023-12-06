@@ -33,8 +33,13 @@
     device = "192.168.1.111:/shmily/doc";
     fsType = "nfs";
   };
-
-
+  
+#  fileSystems."/shmily/media" =
+#    { 
+#      device = "shmily/media";
+#      fsType = "zfs";
+#    };
+  
   swapDevices = [ ];
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking

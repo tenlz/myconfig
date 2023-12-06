@@ -11,18 +11,22 @@
       ./gnome.nix
       ./fonts.nix
       ./ibus.nix
-   
+      ./podman.nix
+      ./virt.nix
+      ./containers/qbittorrent.nix 
     ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
  
+  # Importing zpool on boot
+  # boot.zfs.extraPools = [ "shmily" ];
 
   #Where hostID can be generated with: head -c4 /dev/urandom | od -A none -t x4
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
-  networking.hostId = "8588e696";
+  networking.hostId = "79f3a784";
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -86,12 +90,14 @@
   users.users.shmily = {
     isNormalUser = true;
     description = "shmily";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" "podman" "docker" ];
     packages = with pkgs; [
       firefox
     #  thunderbird
     ];
   };
+
+  nix.settings.trusted-users = [ "shmily" ];
 
   # Enable automatic login for the user.
   services.xserver.displayManager.autoLogin.enable = true;
@@ -122,6 +128,9 @@
     wget
     git
     curl
+    docker-compose
+    podman-compose
+    podman-desktop
   ];
   
   programs.fish.enable = true;

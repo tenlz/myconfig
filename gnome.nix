@@ -32,6 +32,7 @@
       gnome-text-editor
       gnome-console
       epiphany
+      yaru-theme
     ]) ++ (with pkgs.gnome; [
       nautilus # file
       file-roller # archive
