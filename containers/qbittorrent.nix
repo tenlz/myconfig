@@ -3,8 +3,7 @@
 {
   
 
-   virtuallisation.oci-containers = {
-      backend = "podman";
+   virtualisation.oci-containers.containers = {
       qbitorrent = {
         image = "ghcr.io/linuxserver/qbittorrent";
         autoStart = true;
