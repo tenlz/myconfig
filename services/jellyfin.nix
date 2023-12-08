@@ -5,7 +5,7 @@
     jellyfin-web
     jellyfin-ffmpeg   
   ];
-  services.Jellyfin.enable = true;
+  services.jellyfin.enable = true;
 }
 
 

@@ -13,7 +13,9 @@
       ./ibus.nix
       ./podman.nix
       ./virt.nix
-      ./containers/qbittorrent.nix 
+      ./containers/qbittorrent.nix
+      ./services/jellyfin.nix
+      ./services/qbittorrent.nix 
     ];
 
   # Bootloader.
@@ -133,6 +135,12 @@
     podman-desktop
   ];
   
+  services.qbittorrent = {
+    enable = true;
+    # openFirewall = true;
+    port = 8080;
+  };
+
   programs.fish.enable = true;
   users.users.shmily.shell = pkgs.fish;
 
