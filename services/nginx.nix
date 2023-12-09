@@ -7,7 +7,7 @@
   security.acme = {
     acceptTerms = true;
 
-    email = "REDACTED";
+    email = "shmily@gmail.com";
   };
 
   services.nginx.virtualHosts = let
@@ -15,15 +15,15 @@
       enableACME = true;
       forceSSL = true;
     }; in {
-      "domain.tld" = (SSL // {
+      "tenl.vip" = (SSL // {
         locations."/".proxyPass = "http://127.0.0.1:8080/";
 
         serverAliases = [
-          "www.domain.tld"
+          "www.tenl.vip"
         ];
       });
 
-      "sub.domain.tld" = (SSL // {
+      "jellyfin.tenl.vip" = (SSL // {
         locations."/".proxyPass = "http://127.0.0.1:8081/";
       });
     };
