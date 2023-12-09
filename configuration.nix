@@ -14,8 +14,7 @@
       ./podman.nix
       ./virt.nix
       ./containers/qbittorrent.nix
-      ./services/jellyfin.nix
-      ./services/qbittorrent.nix 
+      ./services/jellyfin.nix 
     ];
 
   # Bootloader.
@@ -25,10 +24,13 @@
   # Importing zpool on boot
   # boot.zfs.extraPools = [ "shmily" ];
 
+  zramSwap.enable = true;
+
   #Where hostID can be generated with: head -c4 /dev/urandom | od -A none -t x4
-  boot.supportedFilesystems = [ "zfs" ];
+  boot.supportedFilesystems = [ "zfs" "ntfs" ];
   boot.zfs.forceImportRoot = false;
   networking.hostId = "79f3a784";
+
 
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -135,11 +137,6 @@
     podman-desktop
   ];
   
-  services.qbittorrent = {
-    enable = true;
-    # openFirewall = true;
-    port = 8080;
-  };
 
   programs.fish.enable = true;
   users.users.shmily.shell = pkgs.fish;
@@ -164,6 +161,18 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+  
+  services.transmission = { 
+    enable = true; #Enable transmission daemon
+    openRPCPort = true; #Open firewall for RPC
+    package = pkgs.transmission_4;
+    settings = { #Override default settings
+      rpc-bind-address = "0.0.0.0"; #Bind to own IP
+      rpc-whitelist = "127.0.0.1,192.168.1.111"; #Whitelist your remote machine (10.0.0.1 in this example)
+      #imcomplete-dir = /tenl/tmp ;
+      #download-dir = /shmily/media ;
+    };
+  }; 
   
   services.spice-vdagentd.enable = true;
 
