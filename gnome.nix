@@ -42,6 +42,7 @@
       dconf-editor
       seahorse
       gnome-disk-utility
+      gnome-boxes
       # loupe # https://github.com/NixOS/nixpkgs/pull/202692
       # gnome-sound-recorder
       # gnome-power-manager

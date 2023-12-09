@@ -13,7 +13,7 @@
       ./ibus.nix
       ./podman.nix
       ./virt.nix
-      ./containers/qbittorrent.nix
+      #./containers/qbittorrent.nix
       ./services/jellyfin.nix 
     ];
 

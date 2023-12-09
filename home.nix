@@ -95,6 +95,7 @@
     usbutils # lsusb
     
     ruby
+    duf    
     
     #gui
     google-chrome

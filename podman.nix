@@ -12,6 +12,22 @@
     };
     oci-containers.backend = "podman";
     containers.registries.search = [ "docker.io" ];
+    
+    #podman zfs support
+    #containers.storage.settings = {
+
+    #storage = {
+
+    #driver = "zfs";
+
+    #graphroot = "/var/lib/containers/storage";
+
+    #runroot = "/run/containers/storage";
+
+    #       };
+
+    #};    
+ 
     docker = { 
       enable = true;
       #enableNvidia = true;
