@@ -1,10 +1,10 @@
-{ config,pkgs, ... }:
+{ config,lib,pkgs, ... }:
 	{
       services.navidrome = {
       enable = true;
       settings = {
-        Address = "192.168.1.111";
-        MusicFolder = "/shmily/media/music";
+        Address = "127.0.0.1";
+        #MusicFolder = "/home/shmily/Music";
         Port = 4533;
       };
     };

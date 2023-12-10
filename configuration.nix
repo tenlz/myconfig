@@ -27,6 +27,11 @@
   # boot.zfs.extraPools = [ "shmily" ];
 
   zramSwap.enable = true;
+  
+  # Firmware updates
+   hardware.enableRedistributableFirmware = true;
+   services.fwupd.enable = true;
+ 
 
   #Where hostID can be generated with: head -c4 /dev/urandom | od -A none -t x4
   boot.supportedFilesystems = [ "zfs" "ntfs" ];
