@@ -14,7 +14,8 @@
       ./podman.nix
       ./virt.nix
       #./containers/qbittorrent.nix
-      ./services/jellyfin.nix 
+      ./services/jellyfin.nix
+      ./services/transmission.nix 
     ];
 
   # Bootloader.
@@ -161,18 +162,6 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
-  
-  services.transmission = { 
-    enable = true; #Enable transmission daemon
-    openRPCPort = true; #Open firewall for RPC
-    package = pkgs.transmission_4;
-    settings = { #Override default settings
-      rpc-bind-address = "0.0.0.0"; #Bind to own IP
-      rpc-whitelist = "127.0.0.1,192.168.1.111"; #Whitelist your remote machine (10.0.0.1 in this example)
-      #imcomplete-dir = /tenl/tmp ;
-      #download-dir = /shmily/media ;
-    };
-  }; 
   
   services.spice-vdagentd.enable = true;
 

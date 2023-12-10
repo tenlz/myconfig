@@ -12,9 +12,10 @@
       home = "/home/shmily";
       settings = {
         download-dir = "${config.services.transmission.home}/Downloads/Transmission";
-        incomplete-dir-enabled = false;
+        incomplete-dir = "${config.services.transmission.home}/Downloads/Transmission/incomplete";
       };
     };
     };
   };
 }
+
