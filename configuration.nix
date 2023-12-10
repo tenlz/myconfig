@@ -15,7 +15,8 @@
       ./services/virt.nix
       #./containers/qbittorrent.nix
       ./services/jellyfin.nix
-      ./services/transmission.nix 
+      ./services/transmission.nix
+      ./services/navidrome.nix 
     ];
 
   # Bootloader.
