@@ -14,8 +14,7 @@
         download-dir = "${config.services.transmission.home}/Downloads/Transmission";
         incomplete-dir = "${config.services.transmission.home}/Downloads/Transmission/incomplete";
       };
-    };
-    };
+    };   
   };
 }
 

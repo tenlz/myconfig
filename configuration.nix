@@ -12,7 +12,7 @@
       ./fonts.nix
       ./ibus.nix
       ./podman.nix
-      ./virt.nix
+      ./services/virt.nix
       #./containers/qbittorrent.nix
       ./services/jellyfin.nix
       ./services/transmission.nix 
