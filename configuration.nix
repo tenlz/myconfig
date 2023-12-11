@@ -168,7 +168,23 @@
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
+
+  #nfs.server
+  services.nfs.server.enable = true;
+  #samba server
+  services.samba.enable = true;
+  services.samba.openFirewall = true;
+
   
+  networking.firewall.enable = true;
+  networking.firewall.allowPing = true;
+ 
+  networking.firewall.allowedTCPPorts = [ 
+   2049 # nfs
+   
+   ];
+    
+
   services.spice-vdagentd.enable = true;
 
   # This value determines the NixOS release from which the default
