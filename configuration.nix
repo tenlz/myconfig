@@ -22,7 +22,10 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
- 
+  
+  #latest zfs kernel
+  boot.kernelPackages = config.boot.zfs.package.latestCompatibleLinuxPackages;
+
   # Importing zpool on boot
   # boot.zfs.extraPools = [ "shmily" ];
 
