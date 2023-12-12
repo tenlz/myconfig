@@ -35,8 +35,6 @@
       yaru-theme
       nordic
       gruvbox-gtk-theme
-      orchis-theme
-      whitesur-gtk-theme
       adw-gtk3
       gradience
       gnomeExtensions.user-themes
