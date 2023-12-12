@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ./gnome.nix
       ./fonts.nix
+      ./dconf.nix
       ./ibus.nix
       ./podman.nix
       ./neovim.nix
