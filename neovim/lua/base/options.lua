@@ -29,14 +29,3 @@ end
 vim.scriptencoding = "utf-8"
 vim.bo.autoread = true
 
---vim.g.mkdp_browser = 'chromium'
-
-vim.cmd([[
-function OpenMarkdownPreview (url)
-  execute "silent ! firefox --new-window --app=" . a:url
-endfunction
-]])
-
-vim.g.mkdp_browserfunc = "OpenMarkdownPreview"
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
