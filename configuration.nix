@@ -12,7 +12,6 @@
       ./fonts.nix
       ./ibus.nix
       ./podman.nix
-      ./neovim
       ./services/virt.nix
       #./containers/qbittorrent.nix
       ./services/jellyfin.nix
