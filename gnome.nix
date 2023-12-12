@@ -35,7 +35,7 @@
       yaru-theme
       nordic
       gruvbox-gtk-theme
-      user-themes
+      gnomeExtensions.user-themes
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.customize-ibus
       gnomeExtensions.quake-mode
