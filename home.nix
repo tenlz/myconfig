@@ -109,6 +109,7 @@
     discord
     upscayl
     libreoffice-fresh
+    goldendict-ng
     telegram-desktop   
   ];
 
