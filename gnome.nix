@@ -43,8 +43,13 @@
       #gnomeExtensions.quake-mode
       gnomeExtensions.fuzzy-app-search
       gnomeExtensions.blur-my-shell
-      gnomeExtensions.system-monitor
+      #gnomeExtensions.system-monitor
       gnomeExtensions.appindicator
+      gnomeExtensions.pano
+      gnomeExtensions.advanced-alttab-window-switcher
+      gnomeExtensions.just-perfection
+      gnomeExtensions.custom-hot-corners-extended
+      gnomeExtensions.search-light
     ]) ++ (with pkgs.gnome; [
       nautilus # file
       file-roller # archive
