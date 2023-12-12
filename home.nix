@@ -166,6 +166,20 @@
                        "obsidian.desktop"
                        "virt-manager.desktop"
                        ];
+      disable-user-extensions = false;
+
+      # `gnome-extensions list` for a list
+      enabled-extensions = [
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+        "gsconnect@andyholmes.github.io"
+        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
+        "blur-my-shell@aunetx"
+        "clipboard-indicator@tudmotu.com"
+        "customize-ibus@hollowman.ml"
+        "gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com"
+        "user-theme@gnome-shell-extensions.gcampax.github.com"
+
+      ];
                     };
     };
       
