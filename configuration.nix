@@ -10,7 +10,6 @@
       ./hardware-configuration.nix
       ./gnome.nix
       ./fonts.nix
-      ./dconf.nix
       ./ibus.nix
       ./podman.nix
       ./neovim.nix
@@ -36,8 +35,8 @@
   # Firmware updates
    hardware.enableRedistributableFirmware = true;
    services.fwupd.enable = true;
- 
-
+  
+  
   #Where hostID can be generated with: head -c4 /dev/urandom | od -A none -t x4
   boot.supportedFilesystems = [ "zfs" "ntfs" ];
   boot.zfs.forceImportRoot = false;
