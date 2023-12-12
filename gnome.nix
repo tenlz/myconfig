@@ -34,7 +34,7 @@
       epiphany
       yaru-theme
       nordic
-      gruvbox
+      gruvbox-gtk-theme
       user-themes
       gnomeExtensions.clipboard-indicator
       gnomeExtensions.customize-ibus
