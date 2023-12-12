@@ -33,6 +33,14 @@
       gnome-console
       epiphany
       yaru-theme
+      nordic
+      gruvbox
+      user-themes
+      gnomeExtensions.clipboard-indicator
+      gnomeExtensions.customize-ibus
+      gnomeExtensions.quake-mode
+      gnomeExtensions.fuzzy-app-search
+      gnomeExtensions.blur-my-shell
     ]) ++ (with pkgs.gnome; [
       nautilus # file
       file-roller # archive
@@ -47,8 +55,8 @@
       # gnome-sound-recorder
       # gnome-power-manager
     ]);
-  
- 
 
   };
 }
+
+
