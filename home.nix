@@ -174,13 +174,14 @@
       enabled-extensions = [
         "user-theme@gnome-shell-extensions.gcampax.github.com"
         "gsconnect@andyholmes.github.io"
-        "workspace-indicator@gnome-shell-extensions.gcampax.github.com"
         "blur-my-shell@aunetx"
         "clipboard-indicator@tudmotu.com"
         "customize-ibus@hollowman.ml"
         "gnome-fuzzy-app-search@gnome-shell-extensions.Czarlie.gitlab.com"
         "user-theme@gnome-shell-extensions.gcampax.github.com"
-
+        "custom-hot-corners-extended@G-dH.github.com"
+        "pano@elhan.io"
+        "search-light@icedman.github.com"
       ];
                     };
     };
