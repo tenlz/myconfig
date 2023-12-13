@@ -13,6 +13,7 @@
       ./ibus.nix
       ./podman.nix
       ./services/virt.nix
+      ./services/auto-upgrade
       #./containers/qbittorrent.nix
       ./services/jellyfin.nix
       ./services/transmission.nix
