@@ -146,6 +146,7 @@
     docker-compose
     podman-compose
     podman-desktop
+    man-pages
   ];
   
 
