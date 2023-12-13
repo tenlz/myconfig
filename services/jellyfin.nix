@@ -7,7 +7,7 @@
   ];
   services.jellyfin.enable = true;
   networking.firewall = {
-    allowedTCPPortRanges = [
+    allowedTCPPorts = [
     8096
     8920
     ];
